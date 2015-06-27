@@ -4,7 +4,11 @@
 
 ### Basic Structure of the App
 
-**Note: All of this information written in the overview was written before any code was implemented.  This served as a sort of personal guideline of what I want to achieve in this project: mainly a great grasp of the material we learned in the past unit (database manipulation and utilizing the variety of modules accessed through node) and utilizing skills from earlier classes (good implementation of javascript, and way above par ability in manipulating css [this was my weakest suit in my opinion in the last project!])
+**Note: All of this information written in the overview was written before any code was implemented.  This served as a sort of personal guideline of what I want to achieve in this project: mainly a great grasp of the material we learned in the past unit (database manipulation and utilizing the variety of modules accessed through node) and utilizing skills from earlier classes (good implementation of javascript, and way above par ability in manipulating css [this was my weakest suit in my opinion in the last project!])**
+
+Okay.  So in this wiki app there should be a a lot of features akin to the well known wikipedia website.  This means that there should be a main page where it would allow some sort of searching and some sort of logging in feature.  This means that in the welcome page that it should be possible to utilize two specific databases to traverse farther into the site; specifically one that holds user data, and then another that holds all of the data about the specific articles that will be a part of this wiki.  !! There should be a way to add new content right from the main page.
+
+Now the article pages should be (static?) pages where it can be traversable with hashes(to specific articles).  There should be an edit link (the most important!)  And then possible links to the home page, user information, and random articles (this will be etched out later).  
 
 ## Overview of `Wiki.app`
 
