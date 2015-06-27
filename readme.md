@@ -10,6 +10,22 @@ Okay.  So in this wiki app there should be a a lot of features akin to the well 
 
 Now the article pages should be (static?) pages where it can be traversable with hashes(to specific articles).  There should be an edit link (the most important!)  And then possible links to the home page, user information, and random articles (this will be etched out later).  
 
+### Overview of Wireframes
+Figure 1:
+In the Welcome Page there are three destinations available along with a search function.  There is the About Icon, the Log-In Icon, and the Random Article Icon.  Each button should yield a different result. Also the search input on the bottom should be able to go through the database and pull out the relevant article based on what was searched.
+
+Figure 2:
+When the Log-In Icon is clicked the other two icons move towards their respective sides, and the log-in form is pushed out of the Log-In Icon. Once the user is logged in the page is reloaded with the user's icon/globe replacing the log in icon.
+
+Figure 3:
+When the About Icon is clicked the other two icons move towards the right.  Then the information of this site is shown off.  
+
+Figure 4:
+Random article will bring us to one of the available articles within the Jerrkipedia database.
+
+Figure 5:
+In the article page, the article title is on the very top (identical to wikipedia).  there will be options on the right (such as home, user information, random article and another search box.)
+
 ## Overview of `Wiki.app`
 
 Henrietta is a business magnate and wants to create an internally facing wiki for her organization. She wants her employees to be able to write articles in order to inform colleagues about their insights.
