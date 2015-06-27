@@ -1,6 +1,11 @@
 # Wiki.app
 # Built by Jerry Pallath
 
+
+### Basic Structure of the App
+
+**Note: All of this information written in the overview was written before any code was implemented.  This served as a sort of personal guideline of what I want to achieve in this project: mainly a great grasp of the material we learned in the past unit (database manipulation and utilizing the variety of modules accessed through node) and utilizing skills from earlier classes (good implementation of javascript, and way above par ability in manipulating css [this was my weakest suit in my opinion in the last project!])
+
 ## Overview of `Wiki.app`
 
 Henrietta is a business magnate and wants to create an internally facing wiki for her organization. She wants her employees to be able to write articles in order to inform colleagues about their insights.
