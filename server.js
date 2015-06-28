@@ -19,7 +19,11 @@ server.use(methodOverride('_method'));
 server.use(morgan('short'));
 server.use(expressLayouts);
 //Routes and Controllers
-
+var articleController = require ('./controllers/articles.js');
+server.use('/articles', articleController);
+server.get('/', function(req, res){
+  res.render('welcome');
+});
 
 //Catchall Routes
 server.use(function(req, res){
