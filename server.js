@@ -22,6 +22,22 @@ server.use(expressLayouts);
 
 
 //Catchall Routes
-
+server.use(function(req, res){
+  res.send("This page is under construction")
+})
 
 //Database Server Start
+mongoose.connect('mongodb://localhost:27017/jerrkipedia');
+var db = mongoose.connection;
+
+db.on('error', function(){
+  console.log("ERROR OVERLOAD");
+});
+
+db.once('open', function(err){
+  console.log("Error was: ", err);
+  console.log("Database is set to stun");
+  server.listen(3000, function(){
+    console.log("Server is set to stun")
+  });
+});
