@@ -1,5 +1,5 @@
 # Wiki.app
-# Built by Jerry Pallath
+-- Built by Jerry Pallath
 
 
 ## Basic Structure of the App
