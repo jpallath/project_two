@@ -6,7 +6,8 @@ var express      = require('express'),
 	expressLayouts = require('express-ejs-layouts'),
 	morgan         = require('morgan'),
 	mongoose       = require('mongoose'),
-	session        = require('express-session');
+	session        = require('express-session'),
+	marked         = require('marked');
 
 // Set
 server.set('views', "./views");
