@@ -36,7 +36,7 @@ var express = require('express'),
 
 
   //Show
-  rouuter.get('/:id', function(req, res){
+  router.get('/:id', function(req, res){
     var mongoId = req.params.id;
     console.log("This particular mongoId is: ", mongoId);
     Article.findOne({_id:mongoId}, function(err, foundArticle){
@@ -47,9 +47,43 @@ var express = require('express'),
       }
     })
   })
+
+
   //Delete
+  router.delete('/:id', function(req, res){
+    var mongoId= req.params.id;
+    Article.remove({_id:mongoId}, function(err, foundArticle){
+      res.redirect(301, '/articles');
+    });
+  });
+
+
   //Edit
+  router.get('/:id/edit', function(req, res){
+    var mongoId = req.params.id;
+    Article.findOne({_id:mongoId}, function(err, foundArticle){
+      if (err){
+        console.log(err);
+      } else {
+        res.render('articles/edit', {article:foundArticle});
+      };
+    });
+  });
+
+
   //Update
+router.patch('/:id', function(req, res){
+  var mongoId = req.params.id;
+  var updatedArticle = req.body.article;
+  Article.update({_id:mongoId}, updatedArticle, function(err, foundArticle){
+    if (err){
+      console.log("err")
+    } else {
+      res.redirect(301, '/articles/' + mongoId)
+    };
+  });
+});
+
 
   //export
   module.exports=router;
