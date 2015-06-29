@@ -2,7 +2,7 @@
 # Built by Jerry Pallath
 
 
-### Basic Structure of the App
+## Basic Structure of the App
 
 *Note: All of this information written in the overview was written before any code was implemented.  This served as a sort of personal guideline of what I want to achieve in this project: mainly a great grasp of the material we learned in the past unit (database manipulation and utilizing the variety of modules accessed through node) and utilizing skills from earlier classes (good implementation of javascript, and way above par ability in manipulating css [this was my weakest suit in my opinion in the last project!])*
 
@@ -25,6 +25,9 @@ Random article will bring us to one of the available articles within the Jerrkip
 
 *Figure 5:*
 In the article page, the article title is on the very top (identical to wikipedia).  there will be options on the right (such as home, user information, random article and another search box.)
+
+## Basics
+So as of this writing the server, the controllers, and session have all been made.  Now what is needed is to designate some users and some articles.  Along with that we need to set up some sort of stylings and some sort of way to make articles look nice during edits and during reading!
 
 ## Overview of `Wiki.app`
 
