@@ -1,0 +1,11 @@
+<form action='/users/<%user.id%>/?_method=PATCH'method="post">
+  <label>Username:</label>
+  <input type="text" name="user[username]" value="<%= user.username %>">
+  <label>Password:</label>
+  <input type="password" name="user[password]" value="<%= user.password %>">
+  <label>Name:</label>
+  <input type="text" name="user[name]" value="<%= user.name %>">
+  <label>Cell Number:</label>
+  <input type="text" name="user[cell]" value="<%= user.cell %>">
+  <input type="submit" value="Sign Up!" />
+</form>

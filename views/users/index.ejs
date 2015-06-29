@@ -1,0 +1,7 @@
+<dl>
+<% user.forEach(function(user, i){ %>
+<a href="/users/<%=user._id%>">
+	<dt><%= user.username %></dt>
+</a>
+<% }); %>
+</dl>

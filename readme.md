@@ -23,7 +23,7 @@ When the About Icon is clicked the other two icons move towards the right.  Then
 *Figure 4:*
 Random article will bring us to one of the available articles within the Jerrkipedia database.
 
-Figure 5:
+*Figure 5:*
 In the article page, the article title is on the very top (identical to wikipedia).  there will be options on the right (such as home, user information, random article and another search box.)
 
 ## Overview of `Wiki.app`

@@ -12,16 +12,24 @@ var express      = require('express'),
 // Set
 server.set('views', "./views");
 server.set('view engine', 'ejs');
-//Use
-// **Remember to add session here**
+//Uses
+server.use(session({
+	secret:           "jerrkipedia",
+	resave:            false,
+	saveUninitialized: false
+}));
 server.use(bodyParser.urlencoded({extended:true}));
 server.use(express.static('./public'));
 server.use(methodOverride('_method'));
 server.use(morgan('short'));
 server.use(expressLayouts);
-//Routes and Controllers
+// Routes and Controllers
 var articleController = require ('./controllers/articles.js');
 server.use('/articles', articleController);
+
+var userController = require ('./controllers/users.js');
+server.use('/users', userController);
+
 server.get('/', function(req, res){
   res.render('welcome');
 });
