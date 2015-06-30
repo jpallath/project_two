@@ -1,3 +1,4 @@
+<div id="site"class=show>
 <h1><%= article.title %></h1>
 <h2>written by <%= article.author %></h2>
 <p><%= article.content %></p>
@@ -6,3 +7,4 @@
 <form action= '/articles/<%= article._id%>/?_method=DELETE' method="post">
   <input type= "submit" value = "Delete">
 </form>
+</div>

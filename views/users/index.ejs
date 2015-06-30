@@ -1,6 +1,6 @@
-<dl>
+<dl id="site" class="index">
 <% user.forEach(function(user, i){ %>
-<a href="/users/<%=user._id%>">
+<a class="indexlink" href="/users/<%=user._id%>">
 	<dt><%= user.username %></dt>
 </a>
 <% }); %>

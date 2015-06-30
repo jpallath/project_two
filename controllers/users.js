@@ -63,7 +63,7 @@ router.get('/:id', function(req, res){
 router.delete('/:id', function(req, res){
   var mongoId = req.params.id;
   User.remove({_id:mongoId}, function(err, foundUser){
-    res.redirect(301, '/index')
+    res.redirect(301, '/users')
   });
 });
 //Edit
@@ -83,9 +83,9 @@ router.patch('/:id', function(req, res){
   var updatedUser = req.body.user;
   User.update({_id:mongoId}, updatedUser, function(err, foundUser){
     if(err){
-      console.log(err);
+      console.log("woah");
     } else {
-      res.redirect(301, '/users/index')
+      res.redirect(301, '/users/' + mongoId)
     }
   })
 })

@@ -1,9 +1,10 @@
-<form action="/articles/<%=article.id%>/?_method=PATCH" method="post">
-  <label>Author</label>
-  <input type="text" name="article[author]" value="<%= article.author %>">
-  <label >Title</label>
-    <input type="text" name="article[title]" value="<%= article.title %>">
-  <label>content</label>
-  <textarea type="text" name="article[content]"><%= article.content -%></textarea>
+
+<form id="site" class="edit" action="/articles/<%=article.id%>/?_method=PATCH" method="post">
+  <label>Author</label><br>
+  <input type="text" name="article[author]" value="<%= article.author %>"> <br>
+  <label >Title</label><br>
+    <input type="text" name="article[title]" value="<%= article.title %>"> <br>
+  <label>content</label><br>
+  <textarea class="largeDocument" type="text" name="article[content]"><%= article.content -%></textarea><br>
   <input type="submit" value="Update" />
 </form>

@@ -1,7 +1,7 @@
 var express = require('express'),
     router  = express.Router(),
+    marked  = require('marked')
     Article = require('../models/article.js');
-
 
   //Index
   router.get('/', function(req, res){
@@ -28,7 +28,8 @@ var express = require('express'),
       if (err) {
         console.log(err);
       } else {
-        console.log(article)
+        article.contentMarked = marked(article.content)
+        console.log(article.contentMarked)
         res.redirect(301, '/articles')
       }
     })

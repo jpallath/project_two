@@ -1,3 +1,4 @@
+<div id="site" class="index">
 <h1><%= user.username %></h1>
 <p><%= user.name %></p>
 <p><%= user.cell %></p>
@@ -6,3 +7,4 @@
 <form action= '/users/<%= user._id%>/?_method=DELETE' method="post">
   <input type= "submit" value = "Delete">
 </form>
+</div>

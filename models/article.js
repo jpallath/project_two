@@ -1,10 +1,12 @@
 var mongoose = require('mongoose'),
     Schema   = mongoose.Schema;
+    var marked = require('marked');
 
 var articleSchema = Schema({
     title: {type: String, required: true},
     author: String,
-    content: String
+    content: String,
+    contentMarked: String
 })
 
 var Article = mongoose.model("Article", articleSchema);

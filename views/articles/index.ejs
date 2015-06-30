@@ -1,6 +1,7 @@
-<dl>
+
+<dl id="site" class="index">
 <% articles.forEach(function(article, i){ %>
-<a href="/articles/<%=article._id%>">
+<a class="indexlink" href="/articles/<%=article._id%>">
 	<dt><%= article.title %></dt>
 </a>
 <% }); %>
