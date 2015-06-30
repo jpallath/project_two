@@ -1,3 +1,4 @@
+var PORT = process.env.PORT || 3000;
 var express      = require('express'),
 	server         = express(),
 	ejs            = require('ejs'),
@@ -50,7 +51,7 @@ db.on('error', function(){
 db.once('open', function(err){
   console.log("Error was: ", err);
   console.log("Database is set to stun");
-  server.listen(3000, function(){
+  server.listen(PORT, function(){
     console.log("Server is set to stun")
   });
 });
