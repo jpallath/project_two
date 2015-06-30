@@ -1,4 +1,5 @@
 var PORT = process.env.PORT || 3000;
+var MONGOURI = process.env.MONGOLAB-URI || 'mongodb://localhost:27017/jerrkipedia'
 var express      = require('express'),
 	server         = express(),
 	ejs            = require('ejs'),
@@ -41,7 +42,7 @@ server.use(function(req, res){
 })
 
 //Database Server Start
-mongoose.connect('mongodb://localhost:27017/jerrkipedia');
+mongoose.connect(MONGOURI);
 var db = mongoose.connection;
 
 db.on('error', function(){
