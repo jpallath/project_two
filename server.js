@@ -1,5 +1,5 @@
 var PORT = process.env.PORT || 3000;
-var MONGOURI = process.env.MONGOLAB-URI || 'mongodb://localhost:27017/jerrkipedia'
+var MONGOURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/jerrkipedia'
 var express      = require('express'),
 	server         = express(),
 	ejs            = require('ejs'),
