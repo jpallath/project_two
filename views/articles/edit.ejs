@@ -5,9 +5,9 @@
   <label >Title</label><br>
   <input type="text" name="article[title]" value="<%= article.title %>"> <br>
   <label>Category:</label><br>
-  <input type="text" name="article[category]" placeholder="Category"><br>
+  <input type="text" name="article[category]" placeholder="<%= article.category %>"><br>
   <label>Image Link:</label><br>
-  <input type="text" name="article[image]" placeholder="article[image]"><br>
+  <input type="text" name="article[image]" placeholder="<%= article[image] %>"><br>
   <label>content</label><br>
   <textarea class="largeDocument" type="text" name="article[content]"><%= article.content -%></textarea><br>
   <input type="submit" value="Update" />
