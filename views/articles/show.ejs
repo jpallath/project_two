@@ -1,10 +1,15 @@
 <div id="site"class=show>
+<div class=artist>
+<img src=<%= article.image %>>
 <h1><%= article.title %></h1>
-<h2>written by <%= article.author %></h2>
-<p><%= article.content %></p>
-<a href= "/articles/<%= article._id %>/edit">Edit</a>
+</div>
+<h2>last edited by <%= article.author %></h2>
+<div class="content">
+  <%- article.content %>
+</div>
+<a class="buttony" href= "/articles/<%= article._id %>/edit">Edit</a>
 <br>
 <form action= '/articles/<%= article._id%>/?_method=DELETE' method="post">
-  <input type= "submit" value = "Delete">
+  <input class="buttony" type="submit" value="Delete">
 </form>
 </div>

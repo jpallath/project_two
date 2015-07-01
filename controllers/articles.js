@@ -3,6 +3,18 @@ var express = require('express'),
     marked  = require('marked')
     Article = require('../models/article.js');
 
+  router.use(function (req, res, next) {
+    if (req.session.currentUser){
+      res.locals.controller = 'articles';
+      res.locals.currentUser = req.session.currentUser;
+      res.locals.currentId = req.session.currentId;
+      next();
+      } else{
+        res.redirect(301, "/users/login")
+        }
+        console.log("Hey",res.locals);
+        });
+
   //Index
   router.get('/', function(req, res){
     Article.find({},function(err,articlesArray){
@@ -23,6 +35,15 @@ var express = require('express'),
 
   //Create
   router.post('/', function(req, res){
+    if (req.session.currentUser) {
+      req.body.article.author = req.session.currentUser;
+    } else {
+      console.log('it happened here')
+      res.redirect(301, "/users/login")
+    }
+
+    // req.body.article.author = req.session.currentUser;
+
     var newArticle = new Article(req.body.article);
     newArticle.save(function(err, article){
       if (err) {
@@ -37,6 +58,11 @@ var express = require('express'),
 
 
   //Show
+  router.get("/categories", function(req, res){
+    Article.find({},function(err,articlesArray){
+    res.render('articles/categories', {articles: articlesArray})
+  })});
+
   router.get('/:id', function(req, res){
     var mongoId = req.params.id;
     console.log("This particular mongoId is: ", mongoId);
@@ -44,6 +70,7 @@ var express = require('express'),
       if (err){
         console.log("the error: ", err);
       } else {
+        foundArticle.content = marked(foundArticle.content);
         res.render('articles/show',{article: foundArticle})
       }
     })

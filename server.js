@@ -20,6 +20,7 @@ server.use(session({
 	resave:            false,
 	saveUninitialized: false
 }));
+
 server.use(bodyParser.urlencoded({extended:true}));
 server.use(express.static('./public'));
 server.use(methodOverride('_method'));
@@ -31,6 +32,13 @@ server.use('/articles', articleController);
 
 var userController = require ('./controllers/users.js');
 server.use('/users', userController);
+
+// this is the "controller" for the routes below here, should
+// we not hit one of the contollers above
+server.use(function (req, res, next) {
+	res.locals.controller = "main";
+	next();
+})
 
 server.get('/', function(req, res){
   res.render('welcome');

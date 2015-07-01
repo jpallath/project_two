@@ -6,7 +6,9 @@ var articleSchema = Schema({
     title: {type: String, required: true},
     author: String,
     content: String,
-    contentMarked: String
+    category: String,
+    image: String
+    // contentMarked: String
 })
 
 var Article = mongoose.model("Article", articleSchema);

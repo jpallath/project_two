@@ -1,14 +1,12 @@
 var express = require ('express'),
     router  = express.Router(),
-    session = require('express-session'),
     User    = require('../models/user.js');
 
-//Session Initiation
-router.use(session({
-	secret:           "jerrkipedia",
-	resave:            false,
-	saveUninitialized: false
-}));
+router.use(function (req, res, next) {
+  res.locals.controller = 'users';
+  next();
+});
+
 //Index (Maybe Log-In?)
 router.get('/', function(req, res){
   User.find({}, function(err, usersArray){
@@ -24,13 +22,16 @@ router.get('/login', function(req, res){
 })
 router.post('/login', function(req, res){
   var attempt = req.body.user;
-  User.findOne({username: attempt.username}, function(req, found){
-    if (found  && found.password === attempt.password){
+  User.findOne({username: attempt.username}, function(err, found){
+    if (found && found.password === attempt.password){
       console.log("here");
-      session.currentUser= found.username;
-      console.log(found.username);
+      req.session.currentUser = found.username;
+      req.session.currentId = found._id;
+      console.log(req.session);
+      res.redirect(301, "/articles")
     } else {
       console.log("null")
+      res.redirect(301, "/users/login")
     }
   })
 })
