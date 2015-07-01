@@ -7,7 +7,8 @@ var articleSchema = Schema({
     author: String,
     content: String,
     category: String,
-    image: String
+    image: String,
+    edited: {type: Date, default: Date.now}
     // contentMarked: String
 })
 
