@@ -11,6 +11,7 @@ Okay.  So in this wiki app there should be a a lot of features akin to the well 
 Now the article pages should be (static?) pages where it can be traversable with hashes(to specific articles).  There should be an edit link (the most important!)  And then possible links to the home page, user information, and random articles (this will be etched out later).  
 
 ### Overview of Wireframes
+Images of Wireframe will be given upon request!
 *Figure 1:*
 In the Welcome Page there are three destinations available along with a search function.  There is the About Icon, the Log-In Icon, and the Random Article Icon.  Each button should yield a different result. Also the search input on the bottom should be able to go through the database and pull out the relevant article based on what was searched.
 
@@ -59,8 +60,7 @@ Going above and beyond the basic implementation is desirable, should you have th
 7. **EXTRA FANCY** She would like changes to be ratified before becoming the default article.  The newest change with 80% approval is the current article version.
 
 
-* Is 5 minutes in length
-* Shows off all features of the app
+
 * Explains the technical details
     My app is able to do the minimum requirements.  I spent a crazy amount of time to make the things look nice.  And based on my last project, this is significantly better.  I would say this has more of the design tendencies I delve into now than the ones seen in the BlackJack project, which would match the psyche of that of a 6 year old me.
     The project made me feel more comfortable with all of the tools we have learned thus far in GA.  I'm still uncomfortable doing advanced features through mongo/mongoose such as group/aggregate-- but i believe with more practice, I'll solve that.  I had a lot of fun piecing together middleware, and figuring out css.  
@@ -70,6 +70,10 @@ Going above and beyond the basic implementation is desirable, should you have th
     The biggest challenges can be seen right now as unachieved.  Such as the random article link, I just didnt know how to go about it.  The styling could always improve.  
     Other challenges include making the welcome page, which i eventually just gave up on, my aspirations were too high for my weak little mind to achieve.  Many of the challenges I overcame was solved through intuition and a lot of help from classmates.  The hardest part of coding is typos.  You can stare at a page for an hour and not know what's wrong with it (and it's just a typo :\ )
     Categories was wrongly implemented on my part.
+
+* Code you're most proud of
+I was happy with how sidebars remain consistent based on what controller you're using.
+I'm happy in how I implemented old information staying when a user tries to overwrite other data.
 * Explains which improvements you might make
     Every thing that looks incomplete, I wish I made a better attempt over the weekend.  I wish I could have acheived more of the reach goals.
     If I had more time, I would like to make the user have more interactivity, add a profile page with images and information more than just a cell phone (which was the first steps to the bigger picture I wanted to implement)
